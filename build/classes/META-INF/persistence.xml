@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	
+	<persistence-unit name="condominios" 
+	transaction-type="RESOURCE_LOCAL">
+	
+	
+		<class>entidades.Asamblea</class>
+		<class>entidades.Asistencia</class>
+		<class>entidades.AsistenciaPK</class>
+		<class>entidades.Cargo</class>
+		<class>entidades.Concepto</class>
+		<class>entidades.Consejo</class>
+		<class>entidades.ConsejoPK</class>
+		<class>entidades.Detallerecibo</class>
+		<class>entidades.DetallereciboPK</class>
+		<class>entidades.Grupofamiliar</class>
+		<class>entidades.Inquilino</class>
+		<class>entidades.InquilinoPK</class>
+		<class>entidades.Multa</class>
+		<class>entidades.Pago</class>
+		<class>entidades.Parentesco</class>
+		<class>entidades.Persona</class>
+		<class>entidades.Propietario</class>
+		<class>entidades.PropietarioPK</class>
+		<class>entidades.Recibo</class>
+		<class>entidades.Servicio</class>
+		<class>entidades.Solicitud</class>
+		<class>entidades.Tipo</class>
+		<class>entidades.Vivienda</class>
+
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/condominios"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value=""/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/> <!-- DB Dialect -->      
+            <property name="hibernate.show_sql" value="true"/> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true"/> <!-- Show SQL formatted -->
+            
+		</properties>
+	</persistence-unit>	
+</persistence>
