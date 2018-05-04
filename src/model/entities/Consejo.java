@@ -26,7 +26,7 @@ public class Consejo implements Serializable {
 	private Cargo cargoBean;
 
 	//bi-directional many-to-one association to Persona
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="persona", insertable = false, updatable = false)
 	private Persona personaBean;
 

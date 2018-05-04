@@ -13,7 +13,7 @@ import model.factories.MySqlFactoryDao;
 /**
  * Servlet implementation class PersonaServlet
  */
-@WebServlet("/PersonaServlet")
+@WebServlet("/pages/PersonaServlet")
 public class PersonaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -40,16 +40,13 @@ public class PersonaServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-			System.out.println("Esta mamada funciona");
-		
 			Persona myP =new Persona();
 			myP.setDocumento(request.getParameter("cedula"));
 			myP.setNombre(request.getParameter("nombre"));
-			myP.setCelular(request.getParameter("calular"));
-			myP.setDireccion(request.getParameter("direccion"));
 			myP.setEmail(request.getParameter("email"));
+			myP.setCelular(request.getParameter("celular"));
+			myP.setDireccion(request.getParameter("direccion"));
 			myP.setClave(request.getParameter("pass"));
-
 			MySqlFactoryDao myF=new  MySqlFactoryDao();
 			myF.getPersonaDao().insert(myP);
 			

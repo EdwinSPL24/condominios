@@ -23,7 +23,7 @@ public class Inquilino implements Serializable {
 	private int responsable;
 
 	//bi-directional many-to-one association to Persona
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="persona", insertable = false, updatable = false)
 	private Persona personaBean;
 

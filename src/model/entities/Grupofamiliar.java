@@ -27,7 +27,7 @@ public class Grupofamiliar implements Serializable {
 	private String nombre;
 
 	//bi-directional many-to-one association to Parentesco
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="parentesco")
 	private Parentesco parentescoBean;
 

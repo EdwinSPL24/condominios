@@ -20,37 +20,37 @@
       <div>
         <label for="cedula">Cedula:</label>
         <div>
-          <input type="text" id="cedula" placeholder="Digite su cedula">
+          <input type="text" name="cedula" placeholder="Digite su cedula">
         </div>
       </div>
       <div>
         <label for="nombre">Nombre:</label>
         <div>
-          <input type="text" id="nombre" placeholder="Digite su nombre">
+          <input type="text" name="nombre" placeholder="Digite su nombre">
         </div>
       </div>
       <div>
           <label for="celular">Celular:</label>
         <div>
-          <input type="text" id="celular" placeholder="Digite su numero">
+          <input type="text" name="celular" placeholder="Digite su numero">
         </div>
       </div>
       <div>
           <label for="direccion">Direccion:</label>
         <div>
-          <input type="text" id="direccion" placeholder="direccion">
+          <input type="text" name="direccion" placeholder="direccion">
         </div>
       </div>
       <div>
         <label for="email">E-Mail:</label>
         <div>
-          <input type="email" id="email" placeholder="Digite su E-Mail">
+          <input type="email" name="email" placeholder="Digite su E-Mail">
         </div>
       </div>
       <div>
         <label for="pass">Contraseña:</label>
         <div>
-          <input type="password" id="pass" placeholder="Digite su contraseña">
+          <input type="password" name="pass" placeholder="Digite su contraseña">
         </div>
       </div>
       <div>

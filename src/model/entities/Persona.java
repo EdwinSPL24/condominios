@@ -14,29 +14,30 @@ import java.util.List;
 public class Persona implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	@Id 
+	@Column(name = "documento")
 	private String documento;
-
+	@Column(name = "nombre") 
+	private String nombre;
+	@Column(name = "email") 
+	private String email;
+	@Column(name = "celular") 
 	private String celular;
-
+	@Column(name = "direccion") 
+	private String direccion;
+	@Column(name = "clave") 
 	private String clave;
 
-	private String direccion;
-
-	private String email;
-
-	private String nombre;
-
 	//bi-directional many-to-one association to Consejo
-	@OneToMany(mappedBy="personaBean")
+	@OneToMany(mappedBy="personaBean", orphanRemoval=true)
 	private List<Consejo> consejos;
 
 	//bi-directional many-to-one association to Grupofamiliar
-	@OneToMany(mappedBy="persona")
+	@OneToMany(mappedBy="persona", orphanRemoval=true)
 	private List<Grupofamiliar> grupofamiliars;
 
 	//bi-directional many-to-one association to Inquilino
-	@OneToMany(mappedBy="personaBean")
+	@OneToMany(mappedBy="personaBean", orphanRemoval=true)
 	private List<Inquilino> inquilinos;
 
 	public Persona() {
